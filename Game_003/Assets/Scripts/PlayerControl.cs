@@ -18,9 +18,9 @@ public class PlayerControl : MonoBehaviour {
         motor = GetComponent<PlayerMotor>(); 
 	}
 	
-    //Når man venstreklikker
+    //Når man højreklikker
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(1))
         {
             //får man en ray
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -38,8 +38,8 @@ public class PlayerControl : MonoBehaviour {
             }
         }
 
-        //når man højreklikkerz
-        if (Input.GetMouseButtonDown(1))
+        //når man venstreklikker
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -68,4 +68,5 @@ public class PlayerControl : MonoBehaviour {
         focus = null;
         motor.StopFollowingTarget();
     }
+    
 }

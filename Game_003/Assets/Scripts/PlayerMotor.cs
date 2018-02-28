@@ -19,12 +19,14 @@ public class PlayerMotor : MonoBehaviour {
         if (target != null)
         {
             agent.SetDestination(target.position);
+            
         }
     }
 
     public void MoveToPoint (Vector3 point)
     {
         agent.SetDestination(point);
+        Debug.Log("Target is " + point);
     }
 
     public void FollowTarget(Interactable newTarget)
@@ -35,5 +37,8 @@ public class PlayerMotor : MonoBehaviour {
     {
         target = null;
     }
-
-	}
+    public void ReceiveRemotePosition(Vector3 pos)
+    {
+        agent.SetDestination(pos);
+    }
+}

@@ -6,7 +6,37 @@ public class ChestOpen : MonoBehaviour {
     private Animator ChestAnim;
     private bool inside = false;
 
+    public Transform ChestPosition;
+    public PlayerMotor PM;
+
     private void Start()
+    {
+        PM = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>();
+    }
+
+    private void OnMouseDown()
+    {
+        PM.ReceiveRemotePosition(ChestPosition.position);
+        Debug.Log("dewifjew");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*private void Start()
     {
         ChestAnim = GetComponent<Animator>();
     }
@@ -21,12 +51,16 @@ public class ChestOpen : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        if (inside == true)
-        {
-        ChestAnim.SetBool("close", false);
-        ChestAnim.SetBool("open", true);
-        }
-    }
+
+        Debug.Log("den virker");
+
+    if (inside == true)
+    {
+
+    ChestAnim.SetBool("close", false);
+    ChestAnim.SetBool("open", true);
+    }''
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
@@ -35,6 +69,6 @@ public class ChestOpen : MonoBehaviour {
             ChestAnim.SetBool("close", true);
             inside = false;
         }
-    }
+    }*/
 
 }
