@@ -1,14 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour {
 
-    public Item item;
+    public Image icon;
 
-    public void CollectItem ()
+    Item item;
+
+    public void AddItem (Item newItem)
     {
-        Debug.Log("You picked " + item.name + " up");
+        item = newItem;
+        icon.sprite = item.icon;
+        icon.enabled = true;
     }
-	
+
+    public void ClearItem ()
+    {
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+    }
 }

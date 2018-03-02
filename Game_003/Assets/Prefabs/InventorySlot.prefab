@@ -37,6 +37,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224396647343150548}
+  - component: {fileID: 222276276644213092}
+  - component: {fileID: 114170535870081912}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -53,8 +55,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224121397711904112}
   - component: {fileID: 222340191376569378}
-  - component: {fileID: 114138985718009684}
   - component: {fileID: 114509838047922190}
+  - component: {fileID: 114218645632949046}
   m_Layer: 5
   m_Name: ItemButton
   m_TagString: Untagged
@@ -79,7 +81,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114138985718009684
+--- !u!114 &114170535870081912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363987918884422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c94278766897fd4785aa15421e77c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 114623310124274600}
+--- !u!114 &114218645632949046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -182,7 +196,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114138985718009684}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -242,6 +256,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!222 &222276276644213092
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363987918884422}
 --- !u!222 &222340191376569378
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -296,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67.4, y: -64.9}
+  m_AnchoredPosition: {x: 55, y: -66}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224606214217643620
