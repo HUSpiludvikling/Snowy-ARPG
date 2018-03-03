@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-    public enum itemType // your custom enumeration
+//Det her er en enum hvor du kan oplagre dine dropdown data
+    public enum itemType
 {
     Weapon,
     Potion,
@@ -15,16 +16,16 @@ public class Item : ScriptableObject {
 
      [Header("Item Settings")]
 
+     //Her under er en masse data
     public new string name;
     public string description;
-    public itemType Type;
+    public itemType Type; // Det her er den der kalder på dropdown dataene
    public int cost = 1;
     public Sprite picture;
     public Sprite icon;
     public Mesh mesh;
     
     public bool IsDefaultItem = false;
-    
 
     [Header("For weapons")]
     public int attackDamage = 0;
@@ -38,5 +39,9 @@ public class Item : ScriptableObject {
     [Header("For wearables")]
     public int armor = 0;
 
+    public virtual void Use()
+    {
+        Debug.Log("Using" +" "+ name);
+    }
 
 }   

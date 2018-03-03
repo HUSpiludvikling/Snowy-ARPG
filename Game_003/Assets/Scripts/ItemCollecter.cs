@@ -8,11 +8,21 @@
  */
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemCollecter : MonoBehaviour {
 
     //det er her man får den der item fra
     public Item item;
+
+    //det er her du skal putte dit icon ind
+    public Image icon;
+
+    //henter icon fra item
+    public void Start()
+    {
+        icon.sprite = item.icon;
+    }
 
     //Det her tilføjer din item til din inventory. :D
     public void CollectItem ()
