@@ -20,7 +20,10 @@ public class PlayerHealth : MonoBehaviour {
         // Set the initial health of the player.
         currentHealth = startingHealth;
     }
-
+    private void Update()
+    {
+        
+    }
     public void TakeDamage(int amount)
     {
 
