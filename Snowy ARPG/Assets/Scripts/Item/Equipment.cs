@@ -6,7 +6,7 @@ public class Equipment : Item {
 
     public int Armor;
         public int Attack;
-    public EquipmentSlots equipmentSlots;
+    public EquipmentSlots equipmentSlot;
 
     public override void Use()
     {

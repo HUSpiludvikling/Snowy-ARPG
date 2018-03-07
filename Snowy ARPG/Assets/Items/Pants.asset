@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6f7da4895f9f604685b1008973e8c12, type: 3}
-  m_Name: Long Sword
+  m_Name: Pants
   m_EditorClassIdentifier: 
-  name: Long Sword
-  description: is long and sharp
+  name: Pants
+  description: wear them
   IsDefaultItem: 0
-  icon: {fileID: 21300000, guid: 3949cfb8d3d9ea24d93926a39d593339, type: 3}
-  Armor: 0
+  icon: {fileID: 21300000, guid: d27bbeaeb1d95594a97d2ef6f00cd2e6, type: 3}
+  Armor: 2
   Attack: 0
-  equipmentSlot: 1
+  equipmentSlot: 3
