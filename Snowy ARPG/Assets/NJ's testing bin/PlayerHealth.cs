@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-    public int startingHealth = 100;                            // The amount of health the player starts the game with.
-    public int currentHealth;                                   // The current health the player has.
-    public Slider healthSlider;                                 // Reference to the UI's health bar.
+    public float startingHealth = 100f;                            // The amount of health the player starts the game with.
+    public float currentHealth;
+    public float maxhealth { get { return startingHealth; } }                                       // The current health the player has.
+    //public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     //public AudioClip deathClip;                                 // The audio clip to play when the player dies.
     //public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
@@ -19,24 +20,21 @@ public class PlayerHealth : MonoBehaviour {
     {
         // Set the initial health of the player.
         currentHealth = startingHealth;
+
     }
-    private void Update()
+    void Update()
     {
-        
-    }
-    public void TakeDamage(int amount)
-    {
-
-        // Reduce the current health by the damage amount.
-        currentHealth -= amount;
-
-        // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
-
-        // If the player has lost all it's health and the death flag hasn't been set yet...
+        Debug.Log((currentHealth / startingHealth).ToString("0.0"));
+        //healthSlider.value = currentHealth;
+        damageImage.fillAmount = (currentHealth / startingHealth);
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneLoader);
         }
+        else if (currentHealth > maxhealth)
+        {
+            currentHealth = maxhealth;
+        }
+        
     }
 }
