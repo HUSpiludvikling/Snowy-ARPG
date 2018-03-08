@@ -14,7 +14,7 @@ public class Item : ScriptableObject {
     public bool IsDefaultItem = false;
     public Sprite icon;
 
-    public virtual void Use()
+    public virtual void Use(Equipment omg)
     {
         Debug.Log("Using" +" "+ name);
     }

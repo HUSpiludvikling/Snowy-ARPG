@@ -8,9 +8,8 @@ public class PlayerViewSlot : MonoBehaviour
     public Button removeButton;
     public Item Item;
 
-    public void Equip(Item quip)
+    public void Equip(Equipment quip)
     {
-
         icon.sprite = quip.icon;
         Item = quip;
         icon.enabled=true;

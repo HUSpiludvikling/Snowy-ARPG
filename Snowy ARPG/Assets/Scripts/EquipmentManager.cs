@@ -15,7 +15,6 @@ public class EquipmentManager : MonoBehaviour
     #endregion
 
     public Equipment[] currentEquipment;
-
     void Start()
     {
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlots)).Length;

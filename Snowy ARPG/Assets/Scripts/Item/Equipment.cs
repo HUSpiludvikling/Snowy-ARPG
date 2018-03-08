@@ -8,10 +8,10 @@ public class Equipment : Item {
         public int Attack;
     public EquipmentSlots equipmentSlot;
 
-    public override void Use()
+    public override void Use(Equipment omg)
     {
-        base.Use();
-        EquipmentManager.instance.Equip(this);
+        base.Use(omg);
+            EquipmentManager.instance.Equip(this);
     }
 
 }
