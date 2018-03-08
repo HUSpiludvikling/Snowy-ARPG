@@ -8,10 +8,12 @@ public class PlayerMotor : MonoBehaviour {
 
     Transform target;
     NavMeshAgent agent;
+    Animator animu;
 
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
+        animu = GetComponent<Animator>();
 	}
 
     private void Update()
@@ -19,7 +21,15 @@ public class PlayerMotor : MonoBehaviour {
         if (target != null)
         {
             agent.SetDestination(target.position);
-            
+        }
+        if ((0 != agent.velocity.x) || (0 != agent.velocity.z))
+        {
+            animu.Play("Walk");
+        }
+        else
+        {
+            //animu.Play("Idle") ;
+            animu.CrossFade("Idle", 0.2f);
         }
     }
 
