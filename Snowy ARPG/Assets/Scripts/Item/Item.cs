@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Item")]
 public class Item : ScriptableObject {
@@ -14,9 +14,13 @@ public class Item : ScriptableObject {
     public bool IsDefaultItem = false;
     public Sprite icon;
 
-    public virtual void Use(Equipment omg)
+    public virtual void Use()
     {
         Debug.Log("Using" +" "+ name);
     }
 
+    public void RemoveFromInventory()
+    {
+        Inventory.instance.Remove(this);
+    }
 }   

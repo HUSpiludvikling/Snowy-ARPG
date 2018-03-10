@@ -31,7 +31,6 @@ public class ItemCollecter : MonoBehaviour {
         //tilføjer item til inventory
         bool wasPickedUp = Inventory.instance.Collect(item);
         //fjerner det du har samlet op
-        if (wasPickedUp)
             Destroy(gameObject);
     }
 	

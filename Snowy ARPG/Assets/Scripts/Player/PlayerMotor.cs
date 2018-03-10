@@ -28,10 +28,13 @@ public class PlayerMotor : MonoBehaviour {
         }
         else
         {
+            
             //animu.Play("Idle") ;
             animu.CrossFade("Idle", 0.2f);
         }
     }
+
+
 
     public void MoveToPoint (Vector3 point)
     {

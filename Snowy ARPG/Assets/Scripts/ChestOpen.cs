@@ -28,6 +28,7 @@ public class ChestOpen : MonoBehaviour {
         {
             ChestAnim.SetBool("close", false);
             ChestAnim.SetBool("open", true);
+
             Chest.SetActive(true);
         }
     }

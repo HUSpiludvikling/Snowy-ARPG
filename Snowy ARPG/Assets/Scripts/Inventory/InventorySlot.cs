@@ -21,18 +21,24 @@ public class InventorySlot : MonoBehaviour {
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
+
     }
 
     public void CloseButton()
     {
         Inventory.instance.Remove(item);
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
     }
 
     public void UseItem()
     {
         if (item != null)
         {
-            item.Use(item);
+            item.Use();
+            PlayerViewUI.instance.UpdateUI();
         }
     }
 }

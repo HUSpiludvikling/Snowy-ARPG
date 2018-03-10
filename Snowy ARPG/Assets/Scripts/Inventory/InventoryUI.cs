@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    #region Singleton
+    public static InventoryUI instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
     Inventory inventory;
 
     public Transform itemsParent;
@@ -15,6 +24,7 @@ public class InventoryUI : MonoBehaviour
     {
         //snakker til mit inventory
         inventory = Inventory.instance;
+
         //hver gang der sker noget med det der inventory bliver UpdateUI kaldt.
         inventory.onItemChangedCallback += UpdateUI;
 
@@ -22,7 +32,7 @@ public class InventoryUI : MonoBehaviour
     }
 
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         for (int i = 0; i < slots.Length; i++)
         {

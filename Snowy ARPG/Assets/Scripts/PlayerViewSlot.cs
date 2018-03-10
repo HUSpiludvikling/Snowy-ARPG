@@ -8,7 +8,7 @@ public class PlayerViewSlot : MonoBehaviour
     public Button removeButton;
     public Item Item;
 
-    public void Equip(Equipment quip)
+    public void AddEquipment(Equipment quip)
     {
         icon.sprite = quip.icon;
         Item = quip;
@@ -20,5 +20,9 @@ public class PlayerViewSlot : MonoBehaviour
         Item = null;
         icon.sprite = null;
         icon.enabled = false;
+    }
+    public void CloseButton()
+    {
+        Inventory.instance.Remove(Item);
     }
 }

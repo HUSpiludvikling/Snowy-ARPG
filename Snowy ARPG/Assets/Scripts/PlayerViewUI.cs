@@ -5,31 +5,48 @@ using UnityEngine.UI;
 
 public class PlayerViewUI : MonoBehaviour {
 
-    public GameObject playerViewUI;
-    public PlayerViewSlot []slots;
-   
+    #region Singleton
+    public static PlayerViewUI instance;
 
-    public void CloseOpenPlayerView()
+    void Awake()
     {
-        playerViewUI.SetActive(!playerViewUI.activeSelf);
+        instance = this;
     }
-    private void Update()
-    {
-        if (Input.GetButtonDown("Player View"))
-        {
-            playerViewUI.SetActive(!playerViewUI.activeSelf);
-        }
-    }
+    #endregion
+
+    EquipmentManager equipmentManager;
+    
+    PlayerViewSlot[] slots;
+    public Transform itemsParent;
+
     public void Start()
     {
-        var objs = GameObject.FindGameObjectsWithTag("EquipmentSlot");
+        equipmentManager = EquipmentManager.instance;
+        
+        equipmentManager.onItemChangedCallback += UpdateUI;
+
+        slots = itemsParent.GetComponentsInChildren<PlayerViewSlot>();
+
+        /*var objs = GameObject.FindGameObjectsWithTag("EquipmentSlot");
         slots = new PlayerViewSlot[objs.Length];
         for (int i = 0; i < objs.Length; i++)
-            slots[i] = objs[i].GetComponent<PlayerViewSlot>();
+            slots[i] = objs[i].GetComponent<PlayerViewSlot>();*/
         
     }
-    public void Equip(Equipment equipment)
+
+    public void UpdateUI()
     {
-        slots[(int)equipment.equipmentSlot].Equip(equipment);
+        Debug.Log("Updates");
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i < equipmentManager.currentEquipment.Length)
+            {
+                slots[i].AddEquipment(equipmentManager.currentEquipment[i]);
+            }
+            else
+            {
+                slots[i].Remove();
+            }
+        }
     }
 }

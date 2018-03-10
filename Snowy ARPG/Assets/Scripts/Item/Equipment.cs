@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Item/Equipment")]
 public class Equipment : Item {
 
@@ -8,16 +9,19 @@ public class Equipment : Item {
         public int Attack;
     public EquipmentSlots equipmentSlot;
 
-    public override void Use(Equipment omg)
+    public override void Use()
     {
-        base.Use(omg);
+        base.Use();
             EquipmentManager.instance.Equip(this);
+        RemoveFromInventory();
     }
 
 }
 public enum EquipmentSlots {
-Headgear,
-    Weapons,
+    Headgear,
     Shirt,
-    Pants
+    Pants,
+    Shoes,
+    Weapons,
+    Back
 }

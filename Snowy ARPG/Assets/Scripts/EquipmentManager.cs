@@ -5,7 +5,6 @@ using UnityEngine;
 public class EquipmentManager : MonoBehaviour
 {
     #region Singleton
-    public PlayerViewSlot[] slots;
     public static EquipmentManager instance;
 
     void Awake()
@@ -14,16 +13,24 @@ public class EquipmentManager : MonoBehaviour
     }
     #endregion
 
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
     public Equipment[] currentEquipment;
+
+    Inventory inventory;
+
     void Start()
     {
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlots)).Length;
         currentEquipment = new Equipment[numSlots];
 
-        var objs = GameObject.FindGameObjectsWithTag("EquipmentSlot");
+        inventory = Inventory.instance;
+
+        /*var objs = GameObject.FindGameObjectsWithTag("EquipmentSlot");
         slots = new PlayerViewSlot[objs.Length];
         for (int i = 0; i < objs.Length; i++)
-            slots[i] = objs[i].GetComponent<PlayerViewSlot>();
+            slots[i] = objs[i].GetComponent<PlayerViewSlot>();*/
 
     }
 
@@ -31,9 +38,48 @@ public class EquipmentManager : MonoBehaviour
     {
         int slotIndex = (int)newItem.equipmentSlot;
 
-        currentEquipment[slotIndex] = newItem;
-        Debug.Log("EquipmentManager");
+        Equipment oldItem = null;
 
-        slots[slotIndex].Equip(newItem);
+        if (currentEquipment[slotIndex] != null)
+        {
+            oldItem = currentEquipment[slotIndex];
+            inventory.Collect(oldItem);
+
+            PlayerViewUI.instance.UpdateUI();
+        }
+
+        currentEquipment[slotIndex] = newItem;
+    }
+
+    public void Unequip(int slotIndex)
+    {
+        if(currentEquipment[slotIndex] != null)
+        {
+            Equipment oldItem = currentEquipment[slotIndex];
+            inventory.Collect(oldItem);
+
+
+            currentEquipment = null;
+
+            PlayerViewUI.instance.UpdateUI();
+        }
+    }
+    
+    public void UnequipAll()
+    {
+        for (int i = 0; i < currentEquipment.Length; i++)
+        {
+            Unequip(i);
+            PlayerViewUI.instance.UpdateUI();
+        }
+    }
+
+    private void Update()
+    {
+       if (Input.GetButtonDown("UnequipAll"))
+       {
+            UnequipAll();
+            PlayerViewUI.instance.UpdateUI();
+        }
     }
 }
