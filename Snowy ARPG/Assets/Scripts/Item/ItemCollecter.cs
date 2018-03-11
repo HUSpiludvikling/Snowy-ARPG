@@ -29,7 +29,7 @@ public class ItemCollecter : MonoBehaviour {
     {
         Debug.Log("You picked " + item.name + " up");
         //tilføjer item til inventory
-        bool wasPickedUp = Inventory.instance.Collect(item);
+        Inventory.instance.Collect(item);
         //fjerner det du har samlet op
             Destroy(gameObject);
     }

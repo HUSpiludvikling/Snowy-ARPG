@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour {
         //Calc how much damage you can take, before dying/lossing.
         float Health = Endurances * HP;
 
-        //Calc how much damage you can deal in a singel hit.
+        //Calc how much damage you can deal in a single hit.
         float Damage = Power * Attack;
 
         string DamageNumbers = "Damage " + Damage;

@@ -36,7 +36,7 @@ public class PlayerViewUI : MonoBehaviour {
 
     public void UpdateUI()
     {
-        Debug.Log("Updates");
+        Debug.Log("UI Updated");
         for (int i = 0; i < slots.Length; i++)
         {
             if (i < equipmentManager.currentEquipment.Length)
