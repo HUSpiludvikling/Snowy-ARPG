@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
     }
-    #endregion
+	#endregion
+
+	public UnityEvent eksempel;
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 

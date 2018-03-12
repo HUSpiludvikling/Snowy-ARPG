@@ -6,9 +6,9 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Item", menuName = "Item")]
 public class Item : ScriptableObject {
 
-     [Header("Item Settings")]
+    [Header("Item Settings")]
 
-     //Her under er en masse data
+    //Her under er en masse data
     public new string name;
     public string description;
     public bool IsDefaultItem = false;

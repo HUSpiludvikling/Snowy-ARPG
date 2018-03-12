@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class Equipment : Item {
 
     public int Armor;
-        public int Attack;
+    public int Attack;
     public EquipmentSlots equipmentSlot;
 
     public override void Use()
     {
         base.Use();
-            EquipmentManager.instance.Equip(this);
+        EquipmentManager.instance.Equip(this);
         RemoveFromInventory();
     }
 

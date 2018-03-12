@@ -8,11 +8,12 @@ public class PlayerViewSlot : MonoBehaviour
     public Button removeButton;
     public Item Item;
 
+
     public void AddEquipment(Equipment quip)
     {
         icon.sprite = quip.icon;
         Item = quip;
-        icon.enabled=true;
+        icon.enabled = true;
     }
     public void Remove()
     {

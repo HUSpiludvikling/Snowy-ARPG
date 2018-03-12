@@ -16,17 +16,15 @@ public class PlayerStatsVictor : CharacterStats {
 
     public void ChangeEquipment(Equipment newItem, Equipment oldItem)
     {
-    if (newItem != null)
-        {
-            armor.AddModifier(newItem.Armor);
-            damage.AddModifier(newItem.Attack);
-          } 
-    if (oldItem != null)
-        {
-            armor.RemoveModifier(oldItem.Armor);
-            damage.RemoveModifier(oldItem.Attack);
-        }
-    }
-
-
+		if (newItem != null)
+		{
+				armor.AddModifier(newItem.Armor);
+				damage.AddModifier(newItem.Attack);
+		} 
+		if (oldItem != null)
+		{
+				armor.RemoveModifier(oldItem.Armor);
+				damage.RemoveModifier(oldItem.Attack);
+		}
+	}
 }

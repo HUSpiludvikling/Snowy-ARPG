@@ -43,7 +43,7 @@ public class EquipmentManager : MonoBehaviour
         if (currentEquipment[slotIndex] != null)
         {
             oldItem = currentEquipment[slotIndex];
-            inventory.Collect(oldItem);
+            inventory.Collect(oldItem); //	- This caused duplication bug.
 
             PlayerViewUI.instance.UpdateUI();
         }
@@ -78,10 +78,17 @@ public class EquipmentManager : MonoBehaviour
 
     private void Update()
     {
-       if (Input.GetButtonDown("UnequipAll"))
-       {
+		if (Input.GetButtonDown("UnequipAll"))
+		{
             UnequipAll();
             PlayerViewUI.instance.UpdateUI();
-        }
+		}
+		if(Input.GetKeyDown(KeyCode.K))
+		{
+			foreach (Equipment item in currentEquipment)
+			{
+				print(item.description);
+			}
+		}
     }
 }

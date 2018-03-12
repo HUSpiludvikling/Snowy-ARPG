@@ -34,6 +34,9 @@ public class PlayerViewUI : MonoBehaviour {
         
     }
 
+	/// <summary>
+	/// Opdatere Equipment.
+	/// </summary>
     public void UpdateUI()
     {
         Debug.Log("UI Updated");
@@ -41,7 +44,11 @@ public class PlayerViewUI : MonoBehaviour {
         {
             if (i < equipmentManager.currentEquipment.Length)
             {
-                slots[i].AddEquipment(equipmentManager.currentEquipment[i]);
+				if(equipmentManager.currentEquipment[i] != null)
+				{
+					slots[i].AddEquipment(equipmentManager.currentEquipment[i]);
+				}
+                
             }
             else
             {
