@@ -13,8 +13,8 @@ public class EquipmentManager : MonoBehaviour
     }
     #endregion
 
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallback;
+    public delegate void OnEquipmentChanged();
+    public OnEquipmentChanged onEquipmentChangedCallback;
 
     public Equipment[] currentEquipment;
 
@@ -49,6 +49,8 @@ public class EquipmentManager : MonoBehaviour
         }
 
         currentEquipment[slotIndex] = newItem;
+        PlayerStatsVictor.instance.ChangeEquipment(newItem, oldItem);
+
     }
 
     public void Unequip(int slotIndex)

@@ -23,7 +23,7 @@ public class PlayerViewUI : MonoBehaviour {
     {
         equipmentManager = EquipmentManager.instance;
         
-        equipmentManager.onItemChangedCallback += UpdateUI;
+        equipmentManager.onEquipmentChangedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<PlayerViewSlot>();
 
