@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour {
-
+    /*
     //Player stats at level 1
     public float Power = 1f;
     public float Endurances = 10f;
@@ -48,5 +48,5 @@ public class PlayerStats : MonoBehaviour {
 
 
 
-
+    */
 }
