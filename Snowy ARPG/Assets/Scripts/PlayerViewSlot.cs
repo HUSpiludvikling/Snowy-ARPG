@@ -14,6 +14,7 @@ public class PlayerViewSlot : MonoBehaviour
         icon.sprite = quip.icon;
         Item = quip;
         icon.enabled = true;
+
     }
     public void Remove()
     {

@@ -38,6 +38,8 @@ public class EquipmentManager : MonoBehaviour
     {
         int slotIndex = (int)newItem.equipmentSlot;
 
+        PlayerStatsVictor.instance.ChangeEquipment(newItem);
+
         Equipment oldItem = null;
 
         if (currentEquipment[slotIndex] != null)
@@ -45,12 +47,12 @@ public class EquipmentManager : MonoBehaviour
             oldItem = currentEquipment[slotIndex];
             inventory.Collect(oldItem);
 
+            PlayerStatsVictor.instance.RemoveEquipment(oldItem);
+
             PlayerViewUI.instance.UpdateUI();
         }
 
         currentEquipment[slotIndex] = newItem;
-        PlayerStatsVictor.instance.ChangeEquipment(newItem, oldItem);
-
     }
 
     public void Unequip(int slotIndex)
@@ -59,7 +61,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Equipment oldItem = currentEquipment[slotIndex];
             inventory.Collect(oldItem);
-
+            PlayerStatsVictor.instance.RemoveEquipment(oldItem);
 
             currentEquipment = null;
 
@@ -67,14 +69,16 @@ public class EquipmentManager : MonoBehaviour
         }
     }
     
-    public void UnequipAll()
+   /* public void UnequipAll()
     {
         for (int i = 0; i < currentEquipment.Length; i++)
         {
             Unequip(i);
             PlayerViewUI.instance.UpdateUI();
+
         }
     }
+     
 
     private void Update()
     {
@@ -90,5 +94,5 @@ public class EquipmentManager : MonoBehaviour
 				print(item.description);
 			}
 		}
-    }
+    }*/
 }

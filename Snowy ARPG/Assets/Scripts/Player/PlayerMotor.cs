@@ -6,6 +6,12 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMotor : MonoBehaviour {
 
+    #region Singleton
+
+
+    #endregion
+
+
     Transform target;
     NavMeshAgent agent;
     Animator animu;

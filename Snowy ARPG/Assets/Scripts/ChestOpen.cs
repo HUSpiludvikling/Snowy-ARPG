@@ -42,28 +42,33 @@ public class ChestOpen : MonoBehaviour {
             Chest.SetActive(false);
         }
     }
-    public void OnTriggerExit (Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            ChestAnim.SetBool("open", false);
-            ChestAnim.SetBool("close", true);
-            inside = false;
-            if (Chest.gameObject.activeSelf == true)
-            {
-            Chest.SetActive(false);
-            }
-        }
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Player")
         {
             inside = true;
         }
     }
 
-
+    /*public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("1");
+            ChestAnim.SetBool("open", false);
+            ChestAnim.SetBool("close", true);
+            inside = false;
+            Debug.Log("3");
+            if (Chest.gameObject.activeSelf == true)
+            {
+                Debug.Log("2");
+                Chest.SetActive(false);
+            }
+        }
+        */
+}
 
 
 
@@ -111,5 +116,4 @@ public class ChestOpen : MonoBehaviour {
             inside = false;
         }
     }*/
-
-}
+    

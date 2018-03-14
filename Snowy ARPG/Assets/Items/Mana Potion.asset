@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Revoers mana
   IsDefaultItem: 0
   icon: {fileID: 21300000, guid: 8daaf0e507758994598cd6dbd7ef0daf, type: 3}
-  Amount: 0
+  Amount: 3
   potionTypes: 1

@@ -13,6 +13,6 @@ public class EnemyScript : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        playerMotor.ReceiveRemotePosition(playrPosition.position);
+        //MoveToPoint(this.transform);
     }
 }

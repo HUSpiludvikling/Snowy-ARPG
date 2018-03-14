@@ -20,8 +20,8 @@ public class Equipment : Item {
 public enum EquipmentSlots {
     Headgear,
     Shirt,
+    Weapons,
     Pants,
     Shoes,
-    Weapons,
     Back
 }

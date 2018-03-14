@@ -15,6 +15,6 @@ MonoBehaviour:
   description: wear them
   IsDefaultItem: 0
   icon: {fileID: 21300000, guid: d27bbeaeb1d95594a97d2ef6f00cd2e6, type: 3}
-  Armor: 2
-  Attack: 0
+  Armor: 4
+  Attack: 4
   equipmentSlot: 3
