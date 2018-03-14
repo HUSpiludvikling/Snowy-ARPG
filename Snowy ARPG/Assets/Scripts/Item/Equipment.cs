@@ -8,6 +8,7 @@ public class Equipment : Item {
     public int Armor;
     public int Attack;
     public EquipmentSlots equipmentSlot;
+    public int ModifierIndex;
 
     public override void Use()
     {

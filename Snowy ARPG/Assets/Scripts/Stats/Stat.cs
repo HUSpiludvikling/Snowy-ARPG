@@ -19,12 +19,16 @@ public class Stat {
 
     public void AddModifier ( int modifier )
     {
-        if (modifier != 0)
+
             modifiers.Add(modifier);
     }
-    public void RemoveModifier ( int modifier )
+    public void RemoveModifier ( int index )
     {
-        if (modifier != 0)
-            modifiers.Remove(modifier);
+            modifiers.RemoveAt(index);
+    }
+
+    public int GetModifierAmount ()
+    {
+        return modifiers.Count;
     }
 }

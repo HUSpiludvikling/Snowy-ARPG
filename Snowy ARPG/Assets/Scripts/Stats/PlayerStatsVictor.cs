@@ -27,8 +27,18 @@ public class PlayerStatsVictor : CharacterStats {
     {
         if (oldItem != null)
         {
-            armor.RemoveModifier(oldItem.Armor);
-            armor.RemoveModifier(oldItem.Attack);
+            armor.RemoveModifier(oldItem.ModifierIndex);
+            damage.RemoveModifier(oldItem.ModifierIndex);
         }
+    }
+
+    public int GetModifierAmount ()
+    {
+        if (armor.GetModifierAmount() != damage.GetModifierAmount())
+        {
+            throw new System.Exception("lengths of modifiers differ");
+
+        }
+        return armor.GetModifierAmount();
     }
 }

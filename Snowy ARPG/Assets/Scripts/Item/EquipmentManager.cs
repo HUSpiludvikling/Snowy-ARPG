@@ -36,22 +36,21 @@ public class EquipmentManager : MonoBehaviour
 
     public void Equip(Equipment newItem)
     {
+
         int slotIndex = (int)newItem.equipmentSlot;
-
-        PlayerStatsVictor.instance.ChangeEquipment(newItem);
-
-        Equipment oldItem = null;
-
+        
         if (currentEquipment[slotIndex] != null)
         {
-            oldItem = currentEquipment[slotIndex];
+
+            Equipment oldItem = currentEquipment[slotIndex];
             inventory.Collect(oldItem);
 
             PlayerStatsVictor.instance.RemoveEquipment(oldItem);
 
             PlayerViewUI.instance.UpdateUI();
         }
-
+        newItem.ModifierIndex = PlayerStatsVictor.instance.GetModifierAmount();
+        PlayerStatsVictor.instance.ChangeEquipment(newItem);
         currentEquipment[slotIndex] = newItem;
     }
 
