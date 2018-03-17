@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour {
+public class EnemyController : MonoBehaviour {
 
     public PlayerMotor playerMotor;
     public Transform playrPosition;

@@ -14,6 +14,8 @@ public class PlayerStatsVictor : CharacterStats {
 
     #endregion
 
+
+
     public void ChangeEquipment(Equipment newItem)
     {
 		if (newItem != null)
