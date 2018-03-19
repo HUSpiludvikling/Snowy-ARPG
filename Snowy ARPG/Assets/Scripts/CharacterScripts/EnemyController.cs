@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public PlayerMotor playerMotor;
-    public Transform playrPosition;
+    private PlayerMotor playerMotor;
+    private Transform playerPosition;
 
 	void Start () {
         playerMotor = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>();
+        playerPosition = playerMotor.transform;
     }
 
     private void OnMouseDown()
