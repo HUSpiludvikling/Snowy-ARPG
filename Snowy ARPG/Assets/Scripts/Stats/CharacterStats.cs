@@ -12,7 +12,7 @@ public class CharacterStats : MonoBehaviour {
 
    
 
-    private void Awake()
+    public virtual void Awake()
     {
         currentHealth = maxHealth.GetValue();
     }
