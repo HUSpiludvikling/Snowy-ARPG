@@ -10,13 +10,7 @@ public class CharacterStats : MonoBehaviour {
     public Stat damage;
     public int minDamage;
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(damage.GetValue());
-        }
-    }
+   
 
     private void Awake()
     {
