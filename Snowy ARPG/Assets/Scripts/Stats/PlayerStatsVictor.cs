@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatsVictor : CharacterStats {
 
@@ -14,7 +15,18 @@ public class PlayerStatsVictor : CharacterStats {
 
     #endregion
 
+    public Text HealthStats;
+    public Text HealthBar;
+    public Text ArmorStats;
+    public Text DamageStats;
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(damage.GetValue());
+        }
+    }
 
     public void ChangeEquipment(Equipment newItem)
     {
