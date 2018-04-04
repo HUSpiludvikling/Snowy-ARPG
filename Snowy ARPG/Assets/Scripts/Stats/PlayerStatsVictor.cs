@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+<<<<<<< HEAD
 using UnityEngine.SceneManagement;
+=======
+>>>>>>> master
 
 public class PlayerStatsVictor : CharacterStats {
 
@@ -40,7 +43,12 @@ public class PlayerStatsVictor : CharacterStats {
 
 
 
+    public Text HealthStats;
+    public Text HealthBar;
+    public Text ArmorStats;
+    public Text DamageStats;
 
+<<<<<<< HEAD
     private void SetCurrentHealth(float currentHp)
     {
         //Debug.Log((currentHealth / startingHealth).ToString("0.0"));
@@ -60,13 +68,18 @@ public class PlayerStatsVictor : CharacterStats {
     public Text ArmorStats;
     public Text DamageStats;
 
+=======
+>>>>>>> master
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(damage.GetValue());
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> master
     }
 
     public void ChangeEquipment(Equipment newItem)
