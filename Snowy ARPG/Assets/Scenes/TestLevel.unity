@@ -216,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackgroundMusic:
   - {fileID: 8300000, guid: dc884d4c6fdf9674fa70d66a1ad200fc, type: 3}
+  playRandom: 0
 --- !u!82 &22768622
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9756,16 +9757,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth:
     baseValue: 100
-  currentHealth: 0
   armor:
     baseValue: 0
   damage:
-    baseValue: 0
-  minDamage: 0
-  HealthStats: {fileID: 0}
-  HealthBar: {fileID: 0}
-  ArmorStats: {fileID: 0}
-  DamageStats: {fileID: 0}
+    baseValue: 5
+  minDamage: 5
+  startingHealth: 100
+  damageImage: {fileID: 1289776855}
+  SceneLoader: 
+  HealthCounter: {fileID: 876348122}
 --- !u!1 &1580949639
 GameObject:
   m_ObjectHideFlags: 0

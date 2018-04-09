@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-<<<<<<< HEAD
 using UnityEngine.SceneManagement;
-=======
->>>>>>> master
-
 public class PlayerStatsVictor : CharacterStats {
 
     #region singleton
@@ -18,6 +14,7 @@ public class PlayerStatsVictor : CharacterStats {
     }
 
     #endregion
+
     public float startingHealth = 100;                              // The amount of health the player starts the game with.
     private float currentHealthField;
     public float currentHealth
@@ -39,16 +36,15 @@ public class PlayerStatsVictor : CharacterStats {
     public float maxhealth { get { return startingHealth; } }     // The current health the player has.
     public Image damageImage;                                     // Reference to an image to flash on the screen on being hurt.
     public string SceneLoader;                                    // Loades the scene specified in unity.
-    private Text texhField;
+    public Text HealthCounter;
 
 
 
-    public Text HealthStats;
+    /*public Text HealthStats;
     public Text HealthBar;
     public Text ArmorStats;
     public Text DamageStats;
-
-<<<<<<< HEAD
+    */
     private void SetCurrentHealth(float currentHp)
     {
         //Debug.Log((currentHealth / startingHealth).ToString("0.0"));
@@ -58,28 +54,23 @@ public class PlayerStatsVictor : CharacterStats {
         {
             SceneManager.LoadScene(SceneLoader);
         }
-        texhField.text = currentHp.ToString();
+        HealthCounter.text = currentHp.ToString();
+
     }
 
     
 
-    public Text HealthStats;
-    public Text HealthBar;
-    public Text ArmorStats;
-    public Text DamageStats;
+    //public Text HealthStats;
+    //public Text HealthBar;
+    //public Text ArmorStats;
+    //public Text DamageStats;
 
-=======
->>>>>>> master
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(damage.GetValue());
         }
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
     }
 
     public void ChangeEquipment(Equipment newItem)
@@ -110,12 +101,24 @@ public class PlayerStatsVictor : CharacterStats {
         return armor.GetModifierAmount();
     }
 
+    public void TakeDamage(int damage)
+    {
+        damage -= armor.GetValue();
+        damage = Mathf.Clamp(damage, minDamage, maxHealth.GetValue());
+        currentHealth = currentHealth - damage;
+        Debug.Log(transform.name + " tager " + damage + " damage.");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     private void Start()
     {
         // Set the initial health of the player.
-
-        texhField = GetComponentInChildren<Text>();
         currentHealth = startingHealth;
+        print(currentHealth + " " + startingHealth);
         //SetCurrentHealth(10);
     }
 }
