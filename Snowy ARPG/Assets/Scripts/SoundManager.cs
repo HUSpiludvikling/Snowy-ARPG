@@ -31,5 +31,9 @@ public class SoundManager : MonoBehaviour {
         {
             PlayRandomSong();
         }
+        if (Input.GetKey(KeyCode.S))
+        {
+            PlayRandomSong();
+        }
     }
 }
