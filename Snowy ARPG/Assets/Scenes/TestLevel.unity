@@ -215,7 +215,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BackgroundMusic:
-  - {fileID: 8300000, guid: dc884d4c6fdf9674fa70d66a1ad200fc, type: 3}
+  - {fileID: 8300000, guid: b1a471c8322c8cc4f8c17007f65b9aaa, type: 3}
+  - {fileID: 8300000, guid: 05c900342d7e19c418e99653b6252f84, type: 3}
+  - {fileID: 8300000, guid: 8822eb304c08ad74ebdb83cfb786f230, type: 3}
+  - {fileID: 8300000, guid: 738fda946e0f25c498cb1c2813c9b65e, type: 3}
+  - {fileID: 8300000, guid: 0ddb1de6bcb46fa4aa6ae88891ff9f56, type: 3}
+  - {fileID: 8300000, guid: 131950a8415b76b409673a38363d530b, type: 3}
+  - {fileID: 8300000, guid: 97879d7d77b459f45bd94d62f2a691d1, type: 3}
+  - {fileID: 8300000, guid: 435202140d30cbd4fb9c7d54840f13c1, type: 3}
+  - {fileID: 8300000, guid: 0719a38d938501e44bbbea155d5afa98, type: 3}
+  - {fileID: 8300000, guid: 26ecd450f85249c42aa985cb3d5a0318, type: 3}
+  playRandom: 1
 --- !u!82 &22768622
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10261,7 +10271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8190e74efa24a8b4caabd5119ddc4a1d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8190e74efa24a8b4caabd5119ddc4a1d, type: 3}
       propertyPath: m_Name
