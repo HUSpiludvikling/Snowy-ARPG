@@ -215,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BackgroundMusic:
-<<<<<<< HEAD
   - {fileID: 8300000, guid: b1a471c8322c8cc4f8c17007f65b9aaa, type: 3}
   - {fileID: 8300000, guid: 05c900342d7e19c418e99653b6252f84, type: 3}
   - {fileID: 8300000, guid: 8822eb304c08ad74ebdb83cfb786f230, type: 3}
@@ -227,10 +226,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0719a38d938501e44bbbea155d5afa98, type: 3}
   - {fileID: 8300000, guid: 26ecd450f85249c42aa985cb3d5a0318, type: 3}
   playRandom: 1
-=======
-  - {fileID: 8300000, guid: dc884d4c6fdf9674fa70d66a1ad200fc, type: 3}
-  playRandom: 0
->>>>>>> master
 --- !u!82 &22768622
 AudioSource:
   m_ObjectHideFlags: 0
