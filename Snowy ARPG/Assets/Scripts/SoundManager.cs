@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour {
     private AudioSource audioSource;
     private int currentSong;
     public bool playRandom;
+    public bool isMute = true;
 
     public void Start()
     {
@@ -27,13 +28,18 @@ public class SoundManager : MonoBehaviour {
 
     public void Update()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSource.isPlaying && !isMute)
         {
             PlayRandomSong();
         }
         if (Input.GetKey(KeyCode.S))
         {
             PlayRandomSong();
+        }
+        if (Input.GetKey(KeyCode.M))
+        {
+            isMute = true;
+            AudioListener.pause = !AudioListener.pause;
         }
     }
 }
