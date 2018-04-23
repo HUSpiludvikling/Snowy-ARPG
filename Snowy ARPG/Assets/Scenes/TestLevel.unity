@@ -9827,7 +9827,7 @@ MonoBehaviour:
   minDamage: 5
   startingHealth: 100
   damageImage: {fileID: 1289776855}
-  SceneLoader: 
+  SceneLoader: You lost
   HealthCounter: {fileID: 876348122}
 --- !u!1 &1580949639
 GameObject:
