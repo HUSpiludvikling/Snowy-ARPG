@@ -6,6 +6,13 @@ using UnityEngine;
 public class AggroTrigger : MonoBehaviour {
 
     PlayerStatsVictor psvref;
+    public int attackSpeed;
+    public int damage;
+
+    private void Awake()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +27,8 @@ public class AggroTrigger : MonoBehaviour {
     {
         while (psvref != null)
         {
-            psvref.TakeDamage(5);
-            yield return new WaitForSeconds(1);
+            psvref.TakeDamage(damage);
+            yield return new WaitForSeconds(attackSpeed);
 
         }
         
