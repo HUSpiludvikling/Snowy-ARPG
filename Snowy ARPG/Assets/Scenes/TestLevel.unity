@@ -11490,6 +11490,7 @@ GameObject:
   - component: {fileID: 1777820944}
   - component: {fileID: 1777820943}
   - component: {fileID: 1777820947}
+  - component: {fileID: 1777820948}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11578,6 +11579,7 @@ MonoBehaviour:
   zoomMax: 15
   yawSpeed: 100
   pitch: 0
+<<<<<<< Updated upstream
 --- !u!1 &1781413351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11614,10 +11616,14 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781413353
+=======
+--- !u!114 &1777820948
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1781413351}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11652,6 +11658,15 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781413351}
+=======
+  m_GameObject: {fileID: 1777820942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 788e88b004fa5d34c8848464681aa7fb, type: 2}
+>>>>>>> Stashed changes
 --- !u!1 &1787872957
 GameObject:
   m_ObjectHideFlags: 0
