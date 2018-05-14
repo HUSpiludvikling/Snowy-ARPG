@@ -5,22 +5,25 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     private Rigidbody rB;
-    public GameObject projectile;
     public int speed;
     public Vector3 direction;
 
 
     void Start()
     {
-        projectile = GetComponent<GameObject>();
+        
         rB = GetComponent<Rigidbody>();
     }
 	public void Update () {
-        rB.AddForce(Vector3.forward * speed);
+        rB.AddForce(direction * speed);
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("werk" );
-        Destroy(projectile);
+        if (!other.tag.Equals("Player"))
+        {
+            Debug.Log("werk");
+            Debug.Log(other.transform.name + other.tag);
+            Destroy(this.gameObject);
+        }
     }
 }
