@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16304983, g: 0.19025804, b: 0.21387534, a: 1}
+  m_IndirectSpecularColor: {r: 0.16305006, g: 0.19025823, b: 0.21387571, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 1352029701}
   - component: {fileID: 1352029700}
   m_Layer: 8
-  m_Name: Plane_001
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

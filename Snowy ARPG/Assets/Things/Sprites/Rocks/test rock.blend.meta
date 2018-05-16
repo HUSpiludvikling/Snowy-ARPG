@@ -1,13 +1,11 @@
 fileFormatVersion: 2
 guid: a657b3d6a90b43f47801c97878172732
-timeCreated: 1526301963
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: unnamed
+    2100000: Material_001
     2300000: //RootNode
     3300000: //RootNode
     4300000: Sphere

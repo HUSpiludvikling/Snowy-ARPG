@@ -15,7 +15,6 @@ public class ChestOpen : MonoBehaviour {
     private void Start()
     {
         ChestAnim = GetComponent<Animator>(); 
-        PM = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>();
 
         ChestAnim.SetBool("open", false);
         ChestAnim.SetBool("close", false);
