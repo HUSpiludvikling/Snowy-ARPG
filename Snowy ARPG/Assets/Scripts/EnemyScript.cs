@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
     public int health = 100;
-    public int playerDamage;
-
-	void Start () {
-        
-	}
+    public int playerDamage = 15;
+    public int speed = 1;
+    public GameObject enemy;
+    public bool active = true;
+    
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
@@ -18,21 +18,36 @@ public class EnemyScript : MonoBehaviour {
         {
             Debug.Log("HHAHE");
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
         if (other.tag.Equals("Player"))
         {
-            StartCoroutine(EnemyDamaged());
-            Debug.Log("being dyed");
+            if (Input.GetKey(KeyCode.F) && (active = true))
+            {
+                StartCoroutine(EnemyDamaged());
+                Debug.Log("being dyed");
+                active = false;
+            }
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag.Equals("Player"))
         {
             StopCoroutine(EnemyDamaged());
-            Debug.Log("not being dyed");
         }
-
     }
     IEnumerator EnemyDamaged()
     {
-        yield return new WaitForSeconds(3);
-        health -= playerDamage;
+        health = health - playerDamage;
+        if (health <= 0)
+        {
+            enemy.SetActive(false);
+        }
+        yield return new WaitForSeconds(speed);
+        active = true;
     }
 }
