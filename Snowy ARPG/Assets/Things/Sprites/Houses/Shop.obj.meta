@@ -1,61 +1,20 @@
 fileFormatVersion: 2
-guid: 08c7827caae6eed4b8741dd0a4f75ecb
+guid: e4dfce2dbcdac514885df1395ca62d7b
+timeCreated: 1527514955
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube_001
-    100004: Cube_002
-    100006: Cube_003
-    100008: Cube_004
-    100010: Cylinder
-    100012: Cylinder_001
-    100014: Cylinder_002
-    100016: Cylinder_003
-    100018: //RootNode
-    400000: Cube
-    400002: Cube_001
-    400004: Cube_002
-    400006: Cube_003
-    400008: Cube_004
-    400010: Cylinder
-    400012: Cylinder_001
-    400014: Cylinder_002
-    400016: Cylinder_003
-    400018: //RootNode
-    2100000: unnamed
-    2100002: Material_002
-    2100004: Material_003
-    2100006: Material_001
-    2300000: Cube
-    2300002: Cube_001
-    2300004: Cube_002
-    2300006: Cube_003
-    2300008: Cube_004
-    2300010: Cylinder
-    2300012: Cylinder_001
-    2300014: Cylinder_002
-    2300016: Cylinder_003
-    3300000: Cube
-    3300002: Cube_001
-    3300004: Cube_002
-    3300006: Cube_003
-    3300008: Cube_004
-    3300010: Cylinder
-    3300012: Cylinder_001
-    3300014: Cylinder_002
-    3300016: Cylinder_003
-    4300000: Cube_004
-    4300002: Cylinder_003
-    4300004: Cylinder_002
-    4300006: Cylinder_001
-    4300008: Cylinder
-    4300010: Cube_003
-    4300012: Cube_002
-    4300014: Cube_001
-    4300016: Cube
-    7400000: Default Take
-    9500000: //RootNode
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
+    2100000: Material.002
+    2100002: Material.003
+    2100004: Material.001
+    2300000: default
+    3300000: default
+    4300000: default
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -130,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

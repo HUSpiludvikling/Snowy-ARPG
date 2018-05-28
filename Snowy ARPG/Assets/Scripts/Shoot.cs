@@ -21,7 +21,7 @@ public class Shoot : MonoBehaviour {
             GameObject Temp;
             Temp = GameObject.Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile reference = Temp.GetComponent<Projectile>();
-            reference.direction = transform.forward;
+            reference.direction = transform.forward;    
             reference.transform.rotation = Quaternion.Euler(0, -90 , 0) * transform.rotation;
         }
         
