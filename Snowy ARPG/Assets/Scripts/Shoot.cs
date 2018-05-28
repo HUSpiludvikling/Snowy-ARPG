@@ -14,7 +14,7 @@ public class Shoot : MonoBehaviour {
 
 
 	void Update () {
-        if (Input.GetKey(KeyCode.K) && Time.timeSinceLevelLoad > timestampCooldown + cooldown)
+        if (Input.GetKey(KeyCode.Alpha2) && Time.timeSinceLevelLoad > timestampCooldown + cooldown)
         {
             timestampCooldown = Time.timeSinceLevelLoad;
             Debug.Log("2");

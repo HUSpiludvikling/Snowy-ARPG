@@ -9,9 +9,7 @@ public class EnemyScript : MonoBehaviour {
     public int speed = 1;
     public GameObject enemy;
     public bool active = true;
-    
 
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Projectile"))
@@ -24,7 +22,7 @@ public class EnemyScript : MonoBehaviour {
     {
         if (other.tag.Equals("Player"))
         {
-            if (Input.GetKey(KeyCode.F) && (active = true))
+            if (Input.GetKey(KeyCode.Alpha1) && (active = true))
             {
                 StartCoroutine(EnemyDamaged());
                 Debug.Log("being dyed");
