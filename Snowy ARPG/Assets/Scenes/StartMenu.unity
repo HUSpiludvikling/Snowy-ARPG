@@ -3663,10 +3663,10 @@ RectTransform:
   m_Father: {fileID: 612021278}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35900003, y: 0.24575853}
-  m_AnchorMax: {x: 0.6436131, y: 0.35272446}
-  m_AnchoredPosition: {x: -1.6897924, y: -110.74017}
-  m_SizeDelta: {x: -111.3, y: -23.3}
+  m_AnchorMin: {x: 0.3886042, y: 0.0734815}
+  m_AnchorMax: {x: 0.62229156, y: 0.16614816}
+  m_AnchoredPosition: {x: -9.689793, y: 6}
+  m_SizeDelta: {x: -13.300003, y: -7.300003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066966854
 MonoBehaviour:
