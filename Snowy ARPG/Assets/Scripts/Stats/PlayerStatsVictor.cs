@@ -15,6 +15,20 @@ public class PlayerStatsVictor : CharacterStats {
 
     #endregion
 
+
+    private void Start()
+    {
+        // Set the initial health of the player.
+        currentHealth = startingHealth;
+        print(currentHealth + " " + startingHealth);
+        //SetCurrentHealth(10);
+    }
+
+    private void Update()
+    {
+       // if ( )
+    }
+
     public float startingHealth = 100;                              // The amount of health the player starts the game with.
     private float currentHealthField;
     public float currentHealth
@@ -64,14 +78,7 @@ public class PlayerStatsVictor : CharacterStats {
     //public Text HealthBar;
     //public Text ArmorStats;
     //public Text DamageStats;
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(damage.GetValue());
-        }
-    }
+    
 
     public void ChangeEquipment(Equipment newItem)
     {
@@ -114,11 +121,4 @@ public class PlayerStatsVictor : CharacterStats {
         }
     }
 
-    private void Start()
-    {
-        // Set the initial health of the player.
-        currentHealth = startingHealth;
-        print(currentHealth + " " + startingHealth);
-        //SetCurrentHealth(10);
-    }
 }

@@ -10,7 +10,7 @@ public class ChestOpen : MonoBehaviour {
 
     public Transform ChestPosition;
     public PlayerMotor PM;
-    public GameObject Chest;
+    public GameObject Chest; //Chest Canvas
 
     private void Start()
     {

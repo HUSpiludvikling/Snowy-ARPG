@@ -6,9 +6,19 @@ public class EnemyScript : MonoBehaviour {
 
     public int health = 100;
     public int playerDamage = 15;
-    public int speed = 1;
+    public float cooldownSpeed = 1;
     public GameObject enemy;
     public bool active = true;
+    public PlayerMotor pm;
+    public Transform target;
+    public GameObject PopupText;
+
+    private void Start()
+    {
+        
+
+        //pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,30 +32,31 @@ public class EnemyScript : MonoBehaviour {
     {
         if (other.tag.Equals("Player"))
         {
-            if (Input.GetKey(KeyCode.Alpha1) && (active = true))
+            if (Input.GetKey(KeyCode.Alpha1) && (active == true))
             {
-                StartCoroutine(EnemyDamaged());
-                Debug.Log("being dyed");
                 active = false;
+                pm.RetardedAirPunching();
+                StartCoroutine(Waiter());
+                health = health - playerDamage;
+
+                ShowPopupText();
+
+                if (health <= 0)
+                {
+                    enemy.SetActive(false);
+                }
             }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void ShowPopupText ()
     {
-        if (other.tag.Equals("Player"))
-        {
-            StopCoroutine(EnemyDamaged());
-        }
+        Instantiate(PopupText, transform.position, Quaternion.identity, transform);
     }
-    IEnumerator EnemyDamaged()
+
+    IEnumerator Waiter()
     {
-        health = health - playerDamage;
-        if (health <= 0)
-        {
-            enemy.SetActive(false);
-        }
-        yield return new WaitForSeconds(speed);
+        yield return new WaitForSeconds(cooldownSpeed);
         active = true;
     }
 }

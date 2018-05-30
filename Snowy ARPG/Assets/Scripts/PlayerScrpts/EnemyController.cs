@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyController : MonoBehaviour
+{
 
     public Transform playerPosition;
 
-	void Start () {
-
-    
-    }
-
-    private void OnMouseDown()
+    void Update()
     {
-        //MoveToPoint(playerPosition.transform);
+        if (playerPosition != null)
+        {
+            transform.LookAt(playerPosition);
+        }
     }
 }

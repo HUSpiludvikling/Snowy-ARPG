@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LoadingCat : MonoBehaviour {
 
-    List<Sprite> images = new List<Sprite>();	
+   /* List<Sprite> images = new List<Sprite>();	
 	
 	public void Play () {
         //StartCoroutine Animation;
-	}
+	}*/
 }

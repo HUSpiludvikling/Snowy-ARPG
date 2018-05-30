@@ -15,6 +15,7 @@ public class PlayerMotor : MonoBehaviour {
     Transform target;
     NavMeshAgent agent;
     Animator animu;
+    bool punching = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,18 +35,29 @@ public class PlayerMotor : MonoBehaviour {
         }
         else
         {
-            
-            //animu.Play("Idle") ;
-            animu.CrossFade("Idle", 0.2f);
+            if (punching == false)
+            {
+                //animu.Play("Idle") ;
+                animu.CrossFade("Idle", 0.2f);
+            }
+            else
+            {
+                animu.Play("HitAnimation");
+                StartCoroutine(PunchTimer());
+            }
         }
     }
 
-
+    public void RetardedAirPunching()
+    {
+        Debug.Log("Thisfar"); 
+        punching = true;
+    }
 
     public void MoveToPoint (Vector3 point)
     {
         agent.SetDestination(point);
-        Debug.Log("Target is " + point);
+        //Debug.Log("Target is " + point);
     }
 
     public void FollowTarget(Interactable newTarget)
@@ -59,5 +71,11 @@ public class PlayerMotor : MonoBehaviour {
     public void ReceiveRemotePosition(Vector3 pos)
     {
         agent.SetDestination(pos);
+    }
+
+    IEnumerator PunchTimer()
+    {
+        yield return new WaitForSeconds(0.8f);
+        punching = false;
     }
 }

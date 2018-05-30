@@ -42,8 +42,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         texhField.text = currentHp.ToString();
     }
-
-
+    
 
     void Awake()
     {

@@ -66,6 +66,8 @@ ModelImporter:
     100116: Shirt
     100118: Shoes
     100120: Shorts
+    100122: Head_001
+    100124: Head_002
     400000: Armature
     400002: Body
     400004: Bone
@@ -127,15 +129,21 @@ ModelImporter:
     400116: Shirt
     400118: Shoes
     400120: Shorts
+    400122: Head_001
+    400124: Head_002
     2100000: Skin
     2100002: Shirt
     2100004: Shoes
     2100006: Pants
+    2100008: Eyes
+    2100010: Mask
     4300000: Body
     4300002: Head
     4300004: Shirt
     4300006: Shoes
     4300008: Shorts
+    4300010: Head_002
+    4300012: Head_001
     7400000: Default Take
     7400002: Idle
     7400004: Walk
@@ -146,6 +154,8 @@ ModelImporter:
     13700004: Shirt
     13700006: Shoes
     13700008: Shorts
+    13700010: Head_001
+    13700012: Head_002
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -177,7 +187,7 @@ ModelImporter:
       name: Default Take
       takeName: Default Take
       firstFrame: -1
-      lastFrame: 53
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
