@@ -13,11 +13,10 @@ public class Weird : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        if (glass != null)
-        {
+
+        Debug.Log("ok");
             glass.SetActive(true);
             helmet.SetActive(true);
-        }
         if (hPgained != 0)
         {
 
